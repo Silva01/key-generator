@@ -21,9 +21,9 @@ public abstract class AbstractPassword {
             ']', '}', '\\', '|', ';', ':', '\'', '"', ',', '<', '.', '>', '/',
             '?' };
 
-    protected AbstractPassword(boolean isUpperCase, boolean isLowerCase, boolean isNumber, boolean isSpecialCharacter, Integer limit) {
+    protected AbstractPassword(boolean isUpperCase, boolean isNumber, boolean isSpecialCharacter, Integer limit) {
         this.isUpperCase = isUpperCase;
-        this.isLowerCase = isLowerCase;
+        this.isLowerCase = true;
         this.isNumber = isNumber;
         this.isSpecialCharacter = isSpecialCharacter;
         this.limit = limit;
