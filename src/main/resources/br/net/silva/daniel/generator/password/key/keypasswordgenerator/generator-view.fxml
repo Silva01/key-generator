@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="br.net.silva.daniel.generator.password.key.keypasswordgenerator.infrastructure.controller.GeneratorController">
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #151111;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.net.silva.daniel.generator.password.key.keypasswordgenerator.infrastructure.controller.GeneratorController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <ImageView fitHeight="168.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img.png" />
+      </image>
+   </ImageView>
+   <AmbientLight lightOn="true">
+      <color>
+         <Color green="0.2639966607093811" blue="1.0" />
+      </color>
+   </AmbientLight>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <CheckBox fx:id="uppercaseCheckBox" selected="true" style="-fx-text-fill: white;" text="Uppercase">
+      <font>
+         <Font size="14.0" />
+      </font>
+      <VBox.margin>
+         <Insets right="109.0" />
+      </VBox.margin></CheckBox>
+    <CheckBox fx:id="lowercaseCheckBox" style="-fx-text-fill: white;" text="Lowercase">
+      <VBox.margin>
+         <Insets left="109.0" top="-37.0" />
+      </VBox.margin>
+      <font>
+         <Font size="14.0" />
+      </font></CheckBox>
+    <CheckBox fx:id="numbersCheckBox" style="-fx-text-fill: white;" text="Numbers">
+      <VBox.margin>
+         <Insets right="121.0" />
+      </VBox.margin>
+      <font>
+         <Font size="14.0" />
+      </font></CheckBox>
+    <CheckBox fx:id="specialCharactersCheckBox" style="-fx-text-fill: white;" text="Special Characters">
+      <VBox.margin>
+         <Insets left="149.0" top="-37.0" />
+      </VBox.margin></CheckBox>
+
+    <Label fx:id="sliderLabel" style="-fx-text-fill: white;" text="6">
+      <VBox.margin>
+         <Insets bottom="-34.0" left="500.0" />
+      </VBox.margin></Label>
+    <Slider fx:id="passwordLengthSlider" max="200" min="1" onMouseReleased="#onSlideChange" value="6.0">
+      <VBox.margin>
+         <Insets right="68.0" />
+      </VBox.margin></Slider>
+
+    <TextField fx:id="welcomeText" editable="false" prefWidth="200.0" text="" />
+    <Button onAction="#onHelloButtonClick" style="-fx-background-color: #2b3942;" text="Generate Password" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <font>
+         <Font name="Fira Code Retina" size="14.0" />
+      </font></Button>
 </VBox>

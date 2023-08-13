@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class KeyGenerator extends AbstractKeyGenerator {
-    protected KeyGenerator(boolean haveUpperCase, boolean haveLowerCase, boolean haveNumeric, Integer qtdCharacters, boolean haveSpecialCharacter) {
+    public KeyGenerator(boolean haveUpperCase, boolean haveLowerCase, boolean haveNumeric, Integer qtdCharacters, boolean haveSpecialCharacter) {
         super(haveUpperCase, haveLowerCase, haveNumeric, qtdCharacters, haveSpecialCharacter);
     }
 
@@ -32,9 +32,7 @@ public class KeyGenerator extends AbstractKeyGenerator {
 
     @Override
     protected List<Character> addSpecialCharacters() {
-        return Arrays.asList('~', '`', '!', '@', '#',
-                '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{',
-                ']', '}', '\\', '|', ';', ':', '\'', '"', ',', '<', '.', '>', '/',
-                '?');
+        return Arrays.asList('~', '!', '@', '#',
+                '$', '%', '&', '*', '-', '_', '=', '+', '?');
     }
 }
