@@ -6,7 +6,7 @@
 
     <groupId>br.net.silva.daniel.generator.password.key</groupId>
     <artifactId>key-password-generator</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>key password generator</name>
 
     <properties>
